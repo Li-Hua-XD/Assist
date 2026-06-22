@@ -160,6 +160,29 @@ select:focus {
   background: var(--panel);
 }
 
+.major-wrap {
+  margin-bottom: 22px;
+}
+
+.pair-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 8px 0 10px;
+}
+
+.pair-heading h2 {
+  margin: 0 0 3px;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.pair-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -221,6 +244,10 @@ tbody tr:hover {
 .json-link {
   color: var(--accent-dark);
   font-weight: 750;
+}
+
+.major-name {
+  font-weight: 760;
 }
 
 .empty-note {

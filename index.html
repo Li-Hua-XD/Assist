@@ -43,10 +43,10 @@
         </div>
       </section>
 
-      <section class="controls" aria-label="Filters">
+      <section class="controls" aria-label="Major search">
         <label>
-          <span>Search</span>
-          <input id="search" type="search" placeholder="College, UC campus, status...">
+          <span>Major Search</span>
+          <input id="major-search" type="search" placeholder="Computer Science, Biology, Economics...">
         </label>
         <label>
           <span>CCC</span>
@@ -72,8 +72,29 @@
       </section>
 
       <section class="result-bar" aria-live="polite">
-        <span id="result-count">Loading...</span>
+        <span id="major-result-count">Loading major index...</span>
         <button id="reset" type="button">Reset</button>
+      </section>
+
+      <section class="table-wrap major-wrap" aria-label="Major search results">
+        <table>
+          <thead>
+            <tr>
+              <th>Major</th>
+              <th>CCC</th>
+              <th>UC</th>
+              <th>JSON</th>
+            </tr>
+          </thead>
+          <tbody id="major-rows"></tbody>
+        </table>
+      </section>
+
+      <section class="pair-heading">
+        <div>
+          <h2>Pair Index</h2>
+          <p id="result-count">Loading...</p>
+        </div>
       </section>
 
       <section class="table-wrap" aria-label="Agreement index">
@@ -98,6 +119,15 @@
         <td data-label="UC"></td>
         <td data-label="Reports"></td>
         <td data-label="Status"></td>
+        <td data-label="JSON"></td>
+      </tr>
+    </template>
+
+    <template id="major-row-template">
+      <tr>
+        <td data-label="Major"></td>
+        <td data-label="CCC"></td>
+        <td data-label="UC"></td>
         <td data-label="JSON"></td>
       </tr>
     </template>

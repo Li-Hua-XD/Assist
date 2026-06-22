@@ -1,18 +1,24 @@
 const state = {
   rows: [],
   filtered: [],
+  majorIndex: null,
+  majorRows: [],
+  majorFiltered: [],
   summary: null,
 };
 
 const el = {
-  search: document.querySelector("#search"),
+  majorSearch: document.querySelector("#major-search"),
   ccc: document.querySelector("#ccc-filter"),
   uc: document.querySelector("#uc-filter"),
   status: document.querySelector("#status-filter"),
   reset: document.querySelector("#reset"),
   rows: document.querySelector("#rows"),
+  majorRows: document.querySelector("#major-rows"),
   template: document.querySelector("#row-template"),
+  majorTemplate: document.querySelector("#major-row-template"),
   resultCount: document.querySelector("#result-count"),
+  majorResultCount: document.querySelector("#major-result-count"),
   pairs: document.querySelector("#metric-pairs"),
   cccMetric: document.querySelector("#metric-ccc"),
   ucMetric: document.querySelector("#metric-uc"),
@@ -82,6 +88,21 @@ function fillSelect(select, values) {
   }
 }
 
+function hydrateMajorRows(index) {
+  return index.rows.map(([majorId, cccId, ucId, fileId]) => {
+    const major = index.majors[majorId];
+    const ccc = index.cccs[cccId];
+    const uc = index.ucs[ucId];
+    return {
+      major,
+      ccc,
+      uc,
+      file: index.files[fileId],
+      searchText: `${major} ${ccc} ${uc}`.toLowerCase(),
+    };
+  });
+}
+
 function updateMetrics() {
   const summary = state.summary;
   el.pairs.textContent = numberFormat(summary.totalRows);
@@ -92,20 +113,50 @@ function updateMetrics() {
 }
 
 function applyFilters() {
-  const query = el.search.value.trim().toLowerCase();
+  const query = el.majorSearch.value.trim().toLowerCase();
   const ccc = el.ccc.value;
   const uc = el.uc.value;
   const status = el.status.value;
 
   state.filtered = state.rows.filter((row) => {
-    const haystack = `${row.ccc_name} ${row.uc_name} ${row.status}`.toLowerCase();
-    return (!query || haystack.includes(query))
-      && (!ccc || row.ccc_name === ccc)
+    return (!ccc || row.ccc_name === ccc)
       && (!uc || row.uc_name === uc)
       && (!status || row.status === status);
   });
 
+  state.majorFiltered = state.majorRows.filter((row) => {
+    return (!query || row.searchText.includes(query))
+      && (!ccc || row.ccc === ccc)
+      && (!uc || row.uc === uc);
+  });
+
+  renderMajorRows(Boolean(query || ccc || uc));
   renderRows();
+}
+
+function renderMajorRows(showResults) {
+  const fragment = document.createDocumentFragment();
+  const rows = showResults ? state.majorFiltered : [];
+  const limit = 500;
+
+  for (const row of rows.slice(0, limit)) {
+    const clone = el.majorTemplate.content.firstElementChild.cloneNode(true);
+    const cells = clone.querySelectorAll("td");
+    cells[0].innerHTML = `<span class="major-name">${row.major}</span>`;
+    cells[1].textContent = row.ccc;
+    cells[2].textContent = row.uc;
+    cells[3].innerHTML = `<a class="json-link" href="${row.file}">Open JSON</a>`;
+    fragment.append(clone);
+  }
+
+  el.majorRows.replaceChildren(fragment);
+  if (!showResults) {
+    el.majorResultCount.textContent = `Type a major or choose a school to search ${numberFormat(state.majorRows.length)} major matches`;
+    return;
+  }
+
+  const suffix = rows.length > limit ? `, showing first ${limit}` : "";
+  el.majorResultCount.textContent = `${numberFormat(rows.length)} major matches${suffix}`;
 }
 
 function renderRows() {
@@ -135,27 +186,32 @@ function renderRows() {
 }
 
 async function init() {
-  const [summary, csv] = await Promise.all([
+  const [summary, csv, majorIndex] = await Promise.all([
     fetch("assist_2025_2026_all_majors/summary.json").then((response) => response.json()),
     fetch("assist_2025_2026_all_majors/index.csv").then((response) => response.text()),
+    fetch("site/major-search-index.json").then((response) => response.json()),
   ]);
 
   state.summary = summary;
   state.rows = parseCsv(csv);
   state.filtered = state.rows;
+  state.majorIndex = majorIndex;
+  state.majorRows = hydrateMajorRows(majorIndex);
+  state.majorFiltered = state.majorRows;
 
   updateMetrics();
   fillSelect(el.ccc, uniqueSorted(state.rows, "ccc_name"));
   fillSelect(el.uc, uniqueSorted(state.rows, "uc_name"));
+  renderMajorRows(false);
   renderRows();
 }
 
-el.search.addEventListener("input", applyFilters);
+el.majorSearch.addEventListener("input", applyFilters);
 el.ccc.addEventListener("change", applyFilters);
 el.uc.addEventListener("change", applyFilters);
 el.status.addEventListener("change", applyFilters);
 el.reset.addEventListener("click", () => {
-  el.search.value = "";
+  el.majorSearch.value = "";
   el.ccc.value = "";
   el.uc.value = "";
   el.status.value = "";
@@ -163,5 +219,5 @@ el.reset.addEventListener("click", () => {
 });
 
 init().catch((error) => {
-  el.resultCount.textContent = `Could not load index data: ${error.message}`;
+  el.majorResultCount.textContent = `Could not load index data: ${error.message}`;
 });
