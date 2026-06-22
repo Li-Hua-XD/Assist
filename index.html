@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASSIST 2025-2026 All Majors Index</title>
+    <link rel="stylesheet" href="site/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ASSIST 2025-2026</p>
+        <h1>CCC to UC All Majors Index</h1>
+      </div>
+      <nav class="links" aria-label="Data links">
+        <a href="assist_2025_2026_all_majors/index.csv">CSV</a>
+        <a href="assist_2025_2026_all_majors/summary.json">Summary</a>
+        <a href="scripts/fetch_assist_all_majors.js">Script</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="summary-grid" aria-label="Summary">
+        <div class="metric">
+          <span>Pairs</span>
+          <strong id="metric-pairs">...</strong>
+        </div>
+        <div class="metric">
+          <span>CCC</span>
+          <strong id="metric-ccc">...</strong>
+        </div>
+        <div class="metric">
+          <span>UC</span>
+          <strong id="metric-uc">...</strong>
+        </div>
+        <div class="metric">
+          <span>Major Reports</span>
+          <strong id="metric-reports">...</strong>
+        </div>
+        <div class="metric">
+          <span>Empty</span>
+          <strong id="metric-empty">...</strong>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Filters">
+        <label>
+          <span>Search</span>
+          <input id="search" type="search" placeholder="College, UC campus, status...">
+        </label>
+        <label>
+          <span>CCC</span>
+          <select id="ccc-filter">
+            <option value="">All CCC</option>
+          </select>
+        </label>
+        <label>
+          <span>UC</span>
+          <select id="uc-filter">
+            <option value="">All UC</option>
+          </select>
+        </label>
+        <label>
+          <span>Status</span>
+          <select id="status-filter">
+            <option value="">All statuses</option>
+            <option value="success">Success</option>
+            <option value="empty">Empty</option>
+            <option value="failed">Failed</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="result-bar" aria-live="polite">
+        <span id="result-count">Loading...</span>
+        <button id="reset" type="button">Reset</button>
+      </section>
+
+      <section class="table-wrap" aria-label="Agreement index">
+        <table>
+          <thead>
+            <tr>
+              <th>CCC</th>
+              <th>UC</th>
+              <th>Reports</th>
+              <th>Status</th>
+              <th>JSON</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <template id="row-template">
+      <tr>
+        <td data-label="CCC"></td>
+        <td data-label="UC"></td>
+        <td data-label="Reports"></td>
+        <td data-label="Status"></td>
+        <td data-label="JSON"></td>
+      </tr>
+    </template>
+
+    <script src="site/app.js"></script>
+  </body>
+</html>
