@@ -1,0 +1,21 @@
+{
+  "fetchedAt": "2026-06-22T17:14:31.129Z",
+  "source": "assist.org",
+  "academicYearId": 76,
+  "academicYear": "2025-2026",
+  "categoryCode": "major",
+  "cccName": "Compton Community College",
+  "cccId": 34,
+  "cccSourceInstitutionId": 34,
+  "cccCode": "COMPTON",
+  "ucName": "University of California, Riverside",
+  "ucId": 46,
+  "ucSourceInstitutionId": 46,
+  "ucCode": "UCR",
+  "requestUrl": "https://assist.org/api/agreements?receivingInstitutionId=46&sendingInstitutionId=34&academicYearId=76&categoryCode=major",
+  "responseBytes": 30,
+  "data": {
+    "reports": [],
+    "allReports": []
+  }
+}

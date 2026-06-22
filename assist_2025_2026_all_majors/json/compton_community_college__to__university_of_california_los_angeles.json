@@ -1,0 +1,21 @@
+{
+  "fetchedAt": "2026-06-22T17:14:30.985Z",
+  "source": "assist.org",
+  "academicYearId": 76,
+  "academicYear": "2025-2026",
+  "categoryCode": "major",
+  "cccName": "Compton Community College",
+  "cccId": 34,
+  "cccSourceInstitutionId": 34,
+  "cccCode": "COMPTON",
+  "ucName": "University of California, Los Angeles",
+  "ucId": 117,
+  "ucSourceInstitutionId": 117,
+  "ucCode": "UCLA",
+  "requestUrl": "https://assist.org/api/agreements?receivingInstitutionId=117&sendingInstitutionId=34&academicYearId=76&categoryCode=major",
+  "responseBytes": 30,
+  "data": {
+    "reports": [],
+    "allReports": []
+  }
+}

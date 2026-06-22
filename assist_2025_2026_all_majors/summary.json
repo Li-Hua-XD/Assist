@@ -1,0 +1,931 @@
+{
+  "source": "assist.org",
+  "startedAt": "2026-06-22T17:13:42.058Z",
+  "completedAt": "2026-06-22T17:16:50.442Z",
+  "academicYear": "2025-2026",
+  "academicYearId": 76,
+  "categoryCode": "major",
+  "cccCount": 121,
+  "ucCount": 9,
+  "totalExpectedPairs": 1089,
+  "totalRows": 1089,
+  "successCount": 1080,
+  "emptyCount": 9,
+  "failureCount": 0,
+  "totalReportCount": 125520,
+  "totalAllReportCount": 1080,
+  "cccs": [
+    {
+      "name": "Allan Hancock College",
+      "sourceInstitutionId": 110,
+      "effectiveInstitutionId": 110,
+      "code": "AHC",
+      "fromYear": null
+    },
+    {
+      "name": "American River College",
+      "sourceInstitutionId": 27,
+      "effectiveInstitutionId": 27,
+      "code": "ARC",
+      "fromYear": null
+    },
+    {
+      "name": "Antelope Valley College",
+      "sourceInstitutionId": 121,
+      "effectiveInstitutionId": 121,
+      "code": "AVC",
+      "fromYear": null
+    },
+    {
+      "name": "Bakersfield College",
+      "sourceInstitutionId": 84,
+      "effectiveInstitutionId": 84,
+      "code": "BAKERFLD",
+      "fromYear": null
+    },
+    {
+      "name": "Barstow Community College",
+      "sourceInstitutionId": 20,
+      "effectiveInstitutionId": 20,
+      "code": "BARSTOW",
+      "fromYear": null
+    },
+    {
+      "name": "Berkeley City College",
+      "sourceInstitutionId": 58,
+      "effectiveInstitutionId": 58,
+      "code": "VISTA",
+      "fromYear": 2006
+    },
+    {
+      "name": "Butte College",
+      "sourceInstitutionId": 8,
+      "effectiveInstitutionId": 8,
+      "code": "BUTTE",
+      "fromYear": null
+    },
+    {
+      "name": "Cabrillo College",
+      "sourceInstitutionId": 41,
+      "effectiveInstitutionId": 41,
+      "code": "CABRILLO",
+      "fromYear": null
+    },
+    {
+      "name": "Canada College",
+      "sourceInstitutionId": 68,
+      "effectiveInstitutionId": 68,
+      "code": "CANADA",
+      "fromYear": null
+    },
+    {
+      "name": "Cerritos College",
+      "sourceInstitutionId": 104,
+      "effectiveInstitutionId": 104,
+      "code": "CERRITOS",
+      "fromYear": null
+    },
+    {
+      "name": "Cerro Coso Community College",
+      "sourceInstitutionId": 9,
+      "effectiveInstitutionId": 9,
+      "code": "CERRO",
+      "fromYear": null
+    },
+    {
+      "name": "Chabot College",
+      "sourceInstitutionId": 96,
+      "effectiveInstitutionId": 96,
+      "code": "CHABOT",
+      "fromYear": null
+    },
+    {
+      "name": "Chaffey College",
+      "sourceInstitutionId": 69,
+      "effectiveInstitutionId": 69,
+      "code": "CHAFFEY",
+      "fromYear": null
+    },
+    {
+      "name": "Citrus College",
+      "sourceInstitutionId": 97,
+      "effectiveInstitutionId": 97,
+      "code": "CITRUS",
+      "fromYear": null
+    },
+    {
+      "name": "City College of San Francisco",
+      "sourceInstitutionId": 33,
+      "effectiveInstitutionId": 33,
+      "code": "SFCITY",
+      "fromYear": null
+    },
+    {
+      "name": "Clovis Community College",
+      "sourceInstitutionId": 150,
+      "effectiveInstitutionId": 150,
+      "code": "CLOVIS",
+      "fromYear": null
+    },
+    {
+      "name": "Coalinga College",
+      "sourceInstitutionId": 67,
+      "effectiveInstitutionId": 67,
+      "code": "WHC",
+      "fromYear": 2024
+    },
+    {
+      "name": "Coastline Community College",
+      "sourceInstitutionId": 105,
+      "effectiveInstitutionId": 105,
+      "code": "COASTLIN",
+      "fromYear": null
+    },
+    {
+      "name": "College of Alameda",
+      "sourceInstitutionId": 111,
+      "effectiveInstitutionId": 111,
+      "code": "ALAMEDA",
+      "fromYear": null
+    },
+    {
+      "name": "College of Marin",
+      "sourceInstitutionId": 4,
+      "effectiveInstitutionId": 4,
+      "code": "MARIN",
+      "fromYear": null
+    },
+    {
+      "name": "College of San Mateo",
+      "sourceInstitutionId": 5,
+      "effectiveInstitutionId": 5,
+      "code": "MATEO",
+      "fromYear": null
+    },
+    {
+      "name": "College of the Canyons",
+      "sourceInstitutionId": 140,
+      "effectiveInstitutionId": 140,
+      "code": "CANYONS",
+      "fromYear": null
+    },
+    {
+      "name": "College of the Desert",
+      "sourceInstitutionId": 30,
+      "effectiveInstitutionId": 30,
+      "code": "DESERT",
+      "fromYear": null
+    },
+    {
+      "name": "College of the Redwoods",
+      "sourceInstitutionId": 83,
+      "effectiveInstitutionId": 83,
+      "code": "REDWOODS",
+      "fromYear": null
+    },
+    {
+      "name": "College of the Sequoias",
+      "sourceInstitutionId": 6,
+      "effectiveInstitutionId": 6,
+      "code": "SEQUOIAS",
+      "fromYear": null
+    },
+    {
+      "name": "College of the Siskiyous",
+      "sourceInstitutionId": 102,
+      "effectiveInstitutionId": 102,
+      "code": "SISKIYOU",
+      "fromYear": null
+    },
+    {
+      "name": "Columbia College",
+      "sourceInstitutionId": 10,
+      "effectiveInstitutionId": 10,
+      "code": "COLUMBIA",
+      "fromYear": null
+    },
+    {
+      "name": "Compton College",
+      "sourceInstitutionId": 153,
+      "effectiveInstitutionId": 153,
+      "code": "COMPTON",
+      "fromYear": 2019
+    },
+    {
+      "name": "Compton Community College",
+      "sourceInstitutionId": 34,
+      "effectiveInstitutionId": 34,
+      "code": "COMPTON",
+      "fromYear": null
+    },
+    {
+      "name": "Contra Costa College",
+      "sourceInstitutionId": 28,
+      "effectiveInstitutionId": 28,
+      "code": "CONTRA",
+      "fromYear": null
+    },
+    {
+      "name": "Copper Mountain College",
+      "sourceInstitutionId": 112,
+      "effectiveInstitutionId": 112,
+      "code": "COPPER",
+      "fromYear": null
+    },
+    {
+      "name": "Cosumnes River College",
+      "sourceInstitutionId": 142,
+      "effectiveInstitutionId": 142,
+      "code": "CRC",
+      "fromYear": null
+    },
+    {
+      "name": "Crafton Hills College",
+      "sourceInstitutionId": 70,
+      "effectiveInstitutionId": 70,
+      "code": "CRAFTON",
+      "fromYear": null
+    },
+    {
+      "name": "Cuesta College",
+      "sourceInstitutionId": 16,
+      "effectiveInstitutionId": 16,
+      "code": "CUESTA",
+      "fromYear": null
+    },
+    {
+      "name": "Cuyamaca College",
+      "sourceInstitutionId": 99,
+      "effectiveInstitutionId": 99,
+      "code": "CUYAMACA",
+      "fromYear": null
+    },
+    {
+      "name": "Cypress College",
+      "sourceInstitutionId": 71,
+      "effectiveInstitutionId": 71,
+      "code": "CYPRESS",
+      "fromYear": null
+    },
+    {
+      "name": "De Anza College",
+      "sourceInstitutionId": 113,
+      "effectiveInstitutionId": 113,
+      "code": "DAC",
+      "fromYear": null
+    },
+    {
+      "name": "Diablo Valley College",
+      "sourceInstitutionId": 114,
+      "effectiveInstitutionId": 114,
+      "code": "DIABLO",
+      "fromYear": null
+    },
+    {
+      "name": "East Los Angeles College",
+      "sourceInstitutionId": 118,
+      "effectiveInstitutionId": 118,
+      "code": "LAEC",
+      "fromYear": null
+    },
+    {
+      "name": "El Camino College",
+      "sourceInstitutionId": 103,
+      "effectiveInstitutionId": 103,
+      "code": "CAMINO",
+      "fromYear": null
+    },
+    {
+      "name": "Evergreen Valley College",
+      "sourceInstitutionId": 2,
+      "effectiveInstitutionId": 2,
+      "code": "EVERGRN",
+      "fromYear": null
+    },
+    {
+      "name": "Feather River College",
+      "sourceInstitutionId": 122,
+      "effectiveInstitutionId": 122,
+      "code": "FEATHER",
+      "fromYear": null
+    },
+    {
+      "name": "Folsom Lake College",
+      "sourceInstitutionId": 145,
+      "effectiveInstitutionId": 145,
+      "code": "FOLSOM",
+      "fromYear": null
+    },
+    {
+      "name": "Foothill College",
+      "sourceInstitutionId": 51,
+      "effectiveInstitutionId": 51,
+      "code": "FOOTHILL",
+      "fromYear": null
+    },
+    {
+      "name": "Fresno City College",
+      "sourceInstitutionId": 35,
+      "effectiveInstitutionId": 35,
+      "code": "FRESNO",
+      "fromYear": null
+    },
+    {
+      "name": "Fullerton College",
+      "sourceInstitutionId": 134,
+      "effectiveInstitutionId": 134,
+      "code": "FULLRTON",
+      "fromYear": null
+    },
+    {
+      "name": "Gavilan College",
+      "sourceInstitutionId": 72,
+      "effectiveInstitutionId": 72,
+      "code": "GAVILAN",
+      "fromYear": null
+    },
+    {
+      "name": "Glendale Community College",
+      "sourceInstitutionId": 43,
+      "effectiveInstitutionId": 43,
+      "code": "GLENDALE",
+      "fromYear": null
+    },
+    {
+      "name": "Golden West College",
+      "sourceInstitutionId": 55,
+      "effectiveInstitutionId": 55,
+      "code": "GWC",
+      "fromYear": null
+    },
+    {
+      "name": "Grossmont College",
+      "sourceInstitutionId": 106,
+      "effectiveInstitutionId": 106,
+      "code": "GMCC",
+      "fromYear": null
+    },
+    {
+      "name": "Hartnell College",
+      "sourceInstitutionId": 123,
+      "effectiveInstitutionId": 123,
+      "code": "HARTNELL",
+      "fromYear": null
+    },
+    {
+      "name": "Imperial Valley College",
+      "sourceInstitutionId": 107,
+      "effectiveInstitutionId": 107,
+      "code": "IMPERIAL",
+      "fromYear": null
+    },
+    {
+      "name": "Irvine Valley College",
+      "sourceInstitutionId": 124,
+      "effectiveInstitutionId": 124,
+      "code": "IRVINE",
+      "fromYear": null
+    },
+    {
+      "name": "Kings River College",
+      "sourceInstitutionId": 36,
+      "effectiveInstitutionId": 36,
+      "code": "KRC",
+      "fromYear": null
+    },
+    {
+      "name": "Lake Tahoe Community College",
+      "sourceInstitutionId": 40,
+      "effectiveInstitutionId": 40,
+      "code": "TAHOE",
+      "fromYear": null
+    },
+    {
+      "name": "Laney College",
+      "sourceInstitutionId": 77,
+      "effectiveInstitutionId": 77,
+      "code": "LANEY",
+      "fromYear": null
+    },
+    {
+      "name": "Las Positas College",
+      "sourceInstitutionId": 18,
+      "effectiveInstitutionId": 18,
+      "code": "POSITAS",
+      "fromYear": null
+    },
+    {
+      "name": "Lassen Community College",
+      "sourceInstitutionId": 82,
+      "effectiveInstitutionId": 82,
+      "code": "LASSEN",
+      "fromYear": null
+    },
+    {
+      "name": "Lemoore College",
+      "sourceInstitutionId": 146,
+      "effectiveInstitutionId": 146,
+      "code": "WHCL",
+      "fromYear": 2024
+    },
+    {
+      "name": "Long Beach City College",
+      "sourceInstitutionId": 135,
+      "effectiveInstitutionId": 135,
+      "code": "LBCC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles City College",
+      "sourceInstitutionId": 3,
+      "effectiveInstitutionId": 3,
+      "code": "LACC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Harbor College",
+      "sourceInstitutionId": 31,
+      "effectiveInstitutionId": 31,
+      "code": "LAHC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Mission College",
+      "sourceInstitutionId": 47,
+      "effectiveInstitutionId": 47,
+      "code": "LAMC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Pierce College",
+      "sourceInstitutionId": 86,
+      "effectiveInstitutionId": 86,
+      "code": "LAPC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Southwest College",
+      "sourceInstitutionId": 130,
+      "effectiveInstitutionId": 130,
+      "code": "LASC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Trade Technical College",
+      "sourceInstitutionId": 25,
+      "effectiveInstitutionId": 25,
+      "code": "LATT",
+      "fromYear": null
+    },
+    {
+      "name": "Los Angeles Valley College",
+      "sourceInstitutionId": 44,
+      "effectiveInstitutionId": 44,
+      "code": "LAVC",
+      "fromYear": null
+    },
+    {
+      "name": "Los Medanos College",
+      "sourceInstitutionId": 61,
+      "effectiveInstitutionId": 61,
+      "code": "MEDANOS",
+      "fromYear": null
+    },
+    {
+      "name": "Madera Community College",
+      "sourceInstitutionId": 200,
+      "effectiveInstitutionId": 200,
+      "code": "MCC",
+      "fromYear": null
+    },
+    {
+      "name": "Mendocino College",
+      "sourceInstitutionId": 100,
+      "effectiveInstitutionId": 100,
+      "code": "MENDOCIN",
+      "fromYear": null
+    },
+    {
+      "name": "Merced College",
+      "sourceInstitutionId": 17,
+      "effectiveInstitutionId": 17,
+      "code": "MERCED",
+      "fromYear": null
+    },
+    {
+      "name": "Merritt College",
+      "sourceInstitutionId": 13,
+      "effectiveInstitutionId": 13,
+      "code": "MERRITT",
+      "fromYear": null
+    },
+    {
+      "name": "MiraCosta College",
+      "sourceInstitutionId": 108,
+      "effectiveInstitutionId": 108,
+      "code": "MIRACSTA",
+      "fromYear": null
+    },
+    {
+      "name": "Mission College",
+      "sourceInstitutionId": 32,
+      "effectiveInstitutionId": 32,
+      "code": "MISSION",
+      "fromYear": null
+    },
+    {
+      "name": "Modesto Junior College",
+      "sourceInstitutionId": 52,
+      "effectiveInstitutionId": 52,
+      "code": "MODESTO",
+      "fromYear": null
+    },
+    {
+      "name": "Monterey Peninsula College",
+      "sourceInstitutionId": 133,
+      "effectiveInstitutionId": 133,
+      "code": "MONTEREY",
+      "fromYear": null
+    },
+    {
+      "name": "Moorpark College",
+      "sourceInstitutionId": 139,
+      "effectiveInstitutionId": 139,
+      "code": "MOORPARK",
+      "fromYear": null
+    },
+    {
+      "name": "Moreno Valley College",
+      "sourceInstitutionId": 149,
+      "effectiveInstitutionId": 149,
+      "code": "MVC",
+      "fromYear": null
+    },
+    {
+      "name": "Mount San Antonio College",
+      "sourceInstitutionId": 62,
+      "effectiveInstitutionId": 62,
+      "code": "MTSAC",
+      "fromYear": null
+    },
+    {
+      "name": "Mt. San Jacinto College",
+      "sourceInstitutionId": 53,
+      "effectiveInstitutionId": 53,
+      "code": "MTSJC",
+      "fromYear": null
+    },
+    {
+      "name": "Napa Valley College",
+      "sourceInstitutionId": 73,
+      "effectiveInstitutionId": 73,
+      "code": "NAPA",
+      "fromYear": null
+    },
+    {
+      "name": "Norco College",
+      "sourceInstitutionId": 148,
+      "effectiveInstitutionId": 148,
+      "code": "NORCO",
+      "fromYear": null
+    },
+    {
+      "name": "Ohlone College",
+      "sourceInstitutionId": 48,
+      "effectiveInstitutionId": 48,
+      "code": "OHLONE",
+      "fromYear": null
+    },
+    {
+      "name": "Orange Coast College",
+      "sourceInstitutionId": 74,
+      "effectiveInstitutionId": 74,
+      "code": "OCC",
+      "fromYear": null
+    },
+    {
+      "name": "Oxnard College",
+      "sourceInstitutionId": 87,
+      "effectiveInstitutionId": 87,
+      "code": "OXNARD",
+      "fromYear": null
+    },
+    {
+      "name": "Palo Verde College",
+      "sourceInstitutionId": 63,
+      "effectiveInstitutionId": 63,
+      "code": "PALOVRDE",
+      "fromYear": null
+    },
+    {
+      "name": "Palomar College",
+      "sourceInstitutionId": 56,
+      "effectiveInstitutionId": 56,
+      "code": "PALOMAR",
+      "fromYear": null
+    },
+    {
+      "name": "Pasadena City College",
+      "sourceInstitutionId": 49,
+      "effectiveInstitutionId": 49,
+      "code": "PASADENA",
+      "fromYear": null
+    },
+    {
+      "name": "Porterville College",
+      "sourceInstitutionId": 125,
+      "effectiveInstitutionId": 125,
+      "code": "PORTER",
+      "fromYear": null
+    },
+    {
+      "name": "Rancho Santiago College",
+      "sourceInstitutionId": 14,
+      "effectiveInstitutionId": 14,
+      "code": "RSC",
+      "fromYear": null
+    },
+    {
+      "name": "Reedley College",
+      "sourceInstitutionId": 36,
+      "effectiveInstitutionId": 36,
+      "code": "KRC",
+      "fromYear": 1998
+    },
+    {
+      "name": "Rio Hondo College",
+      "sourceInstitutionId": 64,
+      "effectiveInstitutionId": 64,
+      "code": "RIOHONDO",
+      "fromYear": null
+    },
+    {
+      "name": "Riverside City College",
+      "sourceInstitutionId": 78,
+      "effectiveInstitutionId": 78,
+      "code": "RCC",
+      "fromYear": null
+    },
+    {
+      "name": "Sacramento City College",
+      "sourceInstitutionId": 126,
+      "effectiveInstitutionId": 126,
+      "code": "SCC",
+      "fromYear": null
+    },
+    {
+      "name": "Saddleback College",
+      "sourceInstitutionId": 65,
+      "effectiveInstitutionId": 65,
+      "code": "SADDLBK",
+      "fromYear": null
+    },
+    {
+      "name": "San Bernardino Valley College",
+      "sourceInstitutionId": 131,
+      "effectiveInstitutionId": 131,
+      "code": "SBVC",
+      "fromYear": null
+    },
+    {
+      "name": "San Diego City College",
+      "sourceInstitutionId": 54,
+      "effectiveInstitutionId": 54,
+      "code": "SDCC",
+      "fromYear": null
+    },
+    {
+      "name": "San Diego Mesa College",
+      "sourceInstitutionId": 101,
+      "effectiveInstitutionId": 101,
+      "code": "MESA",
+      "fromYear": null
+    },
+    {
+      "name": "San Diego Miramar College",
+      "sourceInstitutionId": 45,
+      "effectiveInstitutionId": 45,
+      "code": "MIRAMAR",
+      "fromYear": null
+    },
+    {
+      "name": "San Joaquin Delta College",
+      "sourceInstitutionId": 109,
+      "effectiveInstitutionId": 109,
+      "code": "SJDELTA",
+      "fromYear": null
+    },
+    {
+      "name": "San Jose City College",
+      "sourceInstitutionId": 136,
+      "effectiveInstitutionId": 136,
+      "code": "SJCC",
+      "fromYear": null
+    },
+    {
+      "name": "Santa Ana College",
+      "sourceInstitutionId": 14,
+      "effectiveInstitutionId": 14,
+      "code": "RSC",
+      "fromYear": 1997
+    },
+    {
+      "name": "Santa Barbara City College",
+      "sourceInstitutionId": 92,
+      "effectiveInstitutionId": 92,
+      "code": "SBCC",
+      "fromYear": null
+    },
+    {
+      "name": "Santa Monica College",
+      "sourceInstitutionId": 137,
+      "effectiveInstitutionId": 137,
+      "code": "SMCC",
+      "fromYear": null
+    },
+    {
+      "name": "Santa Rosa Junior College",
+      "sourceInstitutionId": 57,
+      "effectiveInstitutionId": 57,
+      "code": "SRC",
+      "fromYear": null
+    },
+    {
+      "name": "Santiago Canyon College",
+      "sourceInstitutionId": 66,
+      "effectiveInstitutionId": 66,
+      "code": "SANTIAGO",
+      "fromYear": null
+    },
+    {
+      "name": "Shasta College",
+      "sourceInstitutionId": 38,
+      "effectiveInstitutionId": 38,
+      "code": "SHASTA",
+      "fromYear": null
+    },
+    {
+      "name": "Sierra College",
+      "sourceInstitutionId": 93,
+      "effectiveInstitutionId": 93,
+      "code": "SIERRA",
+      "fromYear": null
+    },
+    {
+      "name": "Skyline College",
+      "sourceInstitutionId": 127,
+      "effectiveInstitutionId": 127,
+      "code": "SKYLINE",
+      "fromYear": null
+    },
+    {
+      "name": "Solano Community College",
+      "sourceInstitutionId": 94,
+      "effectiveInstitutionId": 94,
+      "code": "SOLANO",
+      "fromYear": null
+    },
+    {
+      "name": "Southwestern College",
+      "sourceInstitutionId": 138,
+      "effectiveInstitutionId": 138,
+      "code": "SWSTRN",
+      "fromYear": null
+    },
+    {
+      "name": "Taft College",
+      "sourceInstitutionId": 119,
+      "effectiveInstitutionId": 119,
+      "code": "TAFT",
+      "fromYear": null
+    },
+    {
+      "name": "Ventura College",
+      "sourceInstitutionId": 95,
+      "effectiveInstitutionId": 95,
+      "code": "VENTURA",
+      "fromYear": null
+    },
+    {
+      "name": "Victor Valley College",
+      "sourceInstitutionId": 19,
+      "effectiveInstitutionId": 19,
+      "code": "VVCC",
+      "fromYear": null
+    },
+    {
+      "name": "Vista Community College",
+      "sourceInstitutionId": 58,
+      "effectiveInstitutionId": 58,
+      "code": "VISTA",
+      "fromYear": null
+    },
+    {
+      "name": "West Hills College Coalinga",
+      "sourceInstitutionId": 67,
+      "effectiveInstitutionId": 67,
+      "code": "WHC",
+      "fromYear": null
+    },
+    {
+      "name": "West Hills College Lemoore",
+      "sourceInstitutionId": 146,
+      "effectiveInstitutionId": 146,
+      "code": "WHCL",
+      "fromYear": null
+    },
+    {
+      "name": "West Los Angeles College",
+      "sourceInstitutionId": 91,
+      "effectiveInstitutionId": 91,
+      "code": "LAWC",
+      "fromYear": null
+    },
+    {
+      "name": "West Valley College",
+      "sourceInstitutionId": 80,
+      "effectiveInstitutionId": 80,
+      "code": "WVC",
+      "fromYear": null
+    },
+    {
+      "name": "Woodland Community College",
+      "sourceInstitutionId": 147,
+      "effectiveInstitutionId": 147,
+      "code": "WCC",
+      "fromYear": null
+    },
+    {
+      "name": "Yuba College",
+      "sourceInstitutionId": 90,
+      "effectiveInstitutionId": 90,
+      "code": "YUBA",
+      "fromYear": null
+    }
+  ],
+  "ucs": [
+    {
+      "name": "University of California, Berkeley",
+      "sourceInstitutionId": 79,
+      "effectiveInstitutionId": 79,
+      "code": "UCB",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Davis",
+      "sourceInstitutionId": 89,
+      "effectiveInstitutionId": 89,
+      "code": "UCD",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Irvine",
+      "sourceInstitutionId": 120,
+      "effectiveInstitutionId": 120,
+      "code": "UCI",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "sourceInstitutionId": 117,
+      "effectiveInstitutionId": 117,
+      "code": "UCLA",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Merced",
+      "sourceInstitutionId": 144,
+      "effectiveInstitutionId": 144,
+      "code": "UCM",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Riverside",
+      "sourceInstitutionId": 46,
+      "effectiveInstitutionId": 46,
+      "code": "UCR",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, San Diego",
+      "sourceInstitutionId": 7,
+      "effectiveInstitutionId": 7,
+      "code": "UCSD",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Santa Barbara",
+      "sourceInstitutionId": 128,
+      "effectiveInstitutionId": 128,
+      "code": "UCSB",
+      "fromYear": null
+    },
+    {
+      "name": "University of California, Santa Cruz",
+      "sourceInstitutionId": 132,
+      "effectiveInstitutionId": 132,
+      "code": "UCSC",
+      "fromYear": null
+    }
+  ]
+}
