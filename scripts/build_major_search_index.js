@@ -23,6 +23,8 @@ function main() {
   const cccs = [];
   const ucs = [];
   const files = [];
+  const keySuffixes = [];
+  const keySuffixMap = new Map();
   const rows = [];
 
   const jsonFiles = fs.readdirSync(jsonRoot)
@@ -33,25 +35,34 @@ function main() {
     const relativeFile = `assist_2025_2026_all_majors/json/${fileName}`;
     const payload = JSON.parse(fs.readFileSync(path.join(jsonRoot, fileName), "utf8"));
     const reports = payload.data && Array.isArray(payload.data.reports) ? payload.data.reports : [];
-    const cccId = getId(cccMap, cccs, payload.cccName);
-    const ucId = getId(ucMap, ucs, payload.ucName);
+    const cccId = getId(cccMap, cccs, `${payload.cccName}|${payload.cccId}`);
+    const ucId = getId(ucMap, ucs, `${payload.ucName}|${payload.ucId}`);
     const fileId = getId(fileMap, files, relativeFile);
 
     for (const report of reports) {
       if (!report || !report.label) continue;
       const majorId = getId(majorMap, majors, report.label.trim());
-      rows.push([majorId, cccId, ucId, fileId]);
+      const keySuffix = String(report.key || "").split("/").pop();
+      const keyId = getId(keySuffixMap, keySuffixes, keySuffix);
+      rows.push([majorId, cccId, ucId, fileId, keyId]);
     }
   }
 
   const result = {
     generatedAt: new Date().toISOString(),
     academicYear: "2025-2026",
-    columns: ["majorId", "cccId", "ucId", "fileId"],
+    columns: ["majorId", "cccId", "ucId", "fileId", "keyId"],
     majors,
-    cccs,
-    ucs,
+    cccs: cccs.map((value) => {
+      const [name, id] = value.split("|");
+      return [name, Number(id)];
+    }),
+    ucs: ucs.map((value) => {
+      const [name, id] = value.split("|");
+      return [name, Number(id)];
+    }),
     files,
+    keySuffixes,
     rows,
   };
 

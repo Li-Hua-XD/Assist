@@ -46,7 +46,7 @@
       <section class="controls" aria-label="Major search">
         <label>
           <span>Major Search</span>
-          <input id="major-search" type="search" placeholder="Computer Science, Biology, Economics...">
+          <input id="major-search" type="search" placeholder="Optional: filter majors after choosing schools">
         </label>
         <label>
           <span>CCC</span>
@@ -73,7 +73,10 @@
 
       <section class="result-bar" aria-live="polite">
         <span id="major-result-count">Loading major index...</span>
-        <button id="reset" type="button">Reset</button>
+        <div class="actions">
+          <a id="all-majors-link" class="button-link disabled" href="#" aria-disabled="true">Open All Majors on ASSIST</a>
+          <button id="reset" type="button">Reset</button>
+        </div>
       </section>
 
       <section class="table-wrap major-wrap" aria-label="Major search results">
@@ -83,7 +86,8 @@
               <th>Major</th>
               <th>CCC</th>
               <th>UC</th>
-              <th>JSON</th>
+              <th>Details</th>
+              <th>Data</th>
             </tr>
           </thead>
           <tbody id="major-rows"></tbody>
@@ -128,7 +132,8 @@
         <td data-label="Major"></td>
         <td data-label="CCC"></td>
         <td data-label="UC"></td>
-        <td data-label="JSON"></td>
+        <td data-label="Details"></td>
+        <td data-label="Data"></td>
       </tr>
     </template>
 

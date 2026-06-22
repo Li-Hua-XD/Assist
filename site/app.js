@@ -13,6 +13,7 @@ const el = {
   uc: document.querySelector("#uc-filter"),
   status: document.querySelector("#status-filter"),
   reset: document.querySelector("#reset"),
+  allMajorsLink: document.querySelector("#all-majors-link"),
   rows: document.querySelector("#rows"),
   majorRows: document.querySelector("#major-rows"),
   template: document.querySelector("#row-template"),
@@ -89,18 +90,44 @@ function fillSelect(select, values) {
 }
 
 function hydrateMajorRows(index) {
-  return index.rows.map(([majorId, cccId, ucId, fileId]) => {
+  return index.rows.map(([majorId, cccId, ucId, fileId, keyId]) => {
     const major = index.majors[majorId];
-    const ccc = index.cccs[cccId];
-    const uc = index.ucs[ucId];
+    const [ccc, cccInstitutionId] = index.cccs[cccId];
+    const [uc, ucInstitutionId] = index.ucs[ucId];
+    const keySuffix = index.keySuffixes[keyId];
     return {
       major,
       ccc,
+      cccInstitutionId,
       uc,
+      ucInstitutionId,
       file: index.files[fileId],
+      assistKey: `76/${cccInstitutionId}/to/${ucInstitutionId}/Major/${keySuffix}`,
       searchText: `${major} ${ccc} ${uc}`.toLowerCase(),
     };
   });
+}
+
+function assistUrl(key) {
+  const parts = key.split("/");
+  const cccId = parts[1];
+  const ucId = parts[3];
+  return `https://assist.org/transfer/results?year=76&institution=${cccId}&agreement=${ucId}&agreementType=to&viewAgreementsOptions=true&view=agreement&viewBy=major&viewSendingAgreements=false&viewByKey=${encodeURIComponent(key)}`;
+}
+
+function updateAllMajorsLink() {
+  if (!el.ccc.value || !el.uc.value || !state.majorFiltered.length) {
+    el.allMajorsLink.href = "#";
+    el.allMajorsLink.classList.add("disabled");
+    el.allMajorsLink.setAttribute("aria-disabled", "true");
+    return;
+  }
+
+  const first = state.majorFiltered[0];
+  const key = `76/${first.cccInstitutionId}/to/${first.ucInstitutionId}/AllMajors`;
+  el.allMajorsLink.href = assistUrl(key);
+  el.allMajorsLink.classList.remove("disabled");
+  el.allMajorsLink.removeAttribute("aria-disabled");
 }
 
 function updateMetrics() {
@@ -130,6 +157,7 @@ function applyFilters() {
       && (!uc || row.uc === uc);
   });
 
+  updateAllMajorsLink();
   renderMajorRows(Boolean(query || ccc || uc));
   renderRows();
 }
@@ -145,13 +173,14 @@ function renderMajorRows(showResults) {
     cells[0].innerHTML = `<span class="major-name">${row.major}</span>`;
     cells[1].textContent = row.ccc;
     cells[2].textContent = row.uc;
-    cells[3].innerHTML = `<a class="json-link" href="${row.file}">Open JSON</a>`;
+    cells[3].innerHTML = `<a class="json-link" href="${assistUrl(row.assistKey)}" target="_blank" rel="noopener">View prerequisites</a>`;
+    cells[4].innerHTML = `<a class="json-link" href="${row.file}">Open JSON</a>`;
     fragment.append(clone);
   }
 
   el.majorRows.replaceChildren(fragment);
   if (!showResults) {
-    el.majorResultCount.textContent = `Type a major or choose a school to search ${numberFormat(state.majorRows.length)} major matches`;
+    el.majorResultCount.textContent = `Choose a CCC and UC to view all majors; optional search narrows ${numberFormat(state.majorRows.length)} major entries`;
     return;
   }
 

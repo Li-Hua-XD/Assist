@@ -1,6 +1,6 @@
 # ASSIST 2025-2026 CCC to UC All Majors
 
-This repository contains 2025-2026 ASSIST CCC-to-UC Major articulation agreement summary data and a static index website for fast major lookup.
+This repository contains 2025-2026 ASSIST CCC-to-UC Major articulation agreement summary data and a static index website for fast major lookup. Choose a CCC and UC campus on the website to view all available majors for that pair, then open the matching ASSIST agreement page for prerequisites/course details.
 
 - `index.html`: searchable website entry point
 - `site/major-search-index.json`: compact major search index
